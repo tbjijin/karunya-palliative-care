@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Karunya Palliative Care</title>
+    <meta name="description" content="Support Karunya Palliative Care's mission to provide free palliative care to the needy people in and around Anthikad. Every donation makes a difference.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h2>Karunya Palliative Care</h2>
+                        <p>Puthenpeedika, Anthikad</p>
+                    </div>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#donors" class="nav-link">Supporters</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & News</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="donate.html" class="donate-btn active">Donate Now</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="donate-hero">
+        <div class="container">
+            <div class="donate-hero-content">
+                <h1>Support Our Mission</h1>
+                <p class="hero-subtitle">Your donation helps us provide free palliative care to those who need it most</p>
+                <div class="impact-highlight">
+                    <div class="impact-item">
+                        <i class="fas fa-rupee-sign"></i>
+                        <span>₹5</span>
+                        <p>Minimum donation</p>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-heart"></i>
+                        <span>100%</span>
+                        <p>Goes to patients</p>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-users"></i>
+                        <span>500+</span>
+                        <p>Families helped</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Options -->
+    <section class="donation-options">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Donation</h2>
+                <p class="section-subtitle">Every contribution makes a difference in someone's life</p>
+            </div>
+            
+            <div class="donation-grid">
+                <!-- Quick Donation Amounts -->
+                <div class="donation-section">
+                    <h3>Quick Donation</h3>
+                    <div class="amount-buttons">
+                        <button class="amount-btn" data-amount="100">₹100</button>
+                        <button class="amount-btn" data-amount="500">₹500</button>
+                        <button class="amount-btn" data-amount="1000">₹1,000</button>
+                        <button class="amount-btn" data-amount="2500">₹2,500</button>
+                        <button class="amount-btn" data-amount="5000">₹5,000</button>
+                        <button class="amount-btn" data-amount="10000">₹10,000</button>
+                    </div>
+                    <div class="custom-amount">
+                        <label for="custom-amount">Custom Amount</label>
+                        <div class="input-group">
+                            <span class="currency">₹</span>
+                            <input type="number" id="custom-amount" placeholder="Enter amount" min="5">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Donation -->
+                <div class="donation-section">
+                    <h3>Monthly Support</h3>
+                    <p>Regular monthly donations help us plan our services better</p>
+                    <div class="monthly-options">
+                        <div class="monthly-option">
+                            <input type="radio" id="monthly-500" name="monthly" value="500">
+                            <label for="monthly-500">
+                                <span class="amount">₹500/month</span>
+                                <span class="description">Supports one family's monthly needs</span>
+                            </label>
+                        </div>
+                        <div class="monthly-option">
+                            <input type="radio" id="monthly-1000" name="monthly" value="1000">
+                            <label for="monthly-1000">
+                                <span class="amount">₹1,000/month</span>
+                                <span class="description">Covers medical supplies for 2 families</span>
+                            </label>
+                        </div>
+                        <div class="monthly-option">
+                            <input type="radio" id="monthly-2500" name="monthly" value="2500">
+                            <label for="monthly-2500">
+                                <span class="amount">₹2,500/month</span>
+                                <span class="description">Supports home care for 5 families</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Form -->
+            <div class="donation-form-section">
+                <h3>Donation Details</h3>
+                <form class="donation-form" id="donation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donor-name">Full Name *</label>
+                            <input type="text" id="donor-name" name="donor-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="donor-email">Email *</label>
+                            <input type="email" id="donor-email" name="donor-email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donor-phone">Phone Number *</label>
+                            <input type="tel" id="donor-phone" name="donor-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="donor-city">City</label>
+                            <input type="text" id="donor-city" name="donor-city">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="donation-type">Donation Type *</label>
+                        <select id="donation-type" name="donation-type" required>
+                            <option value="">Select donation type</option>
+                            <option value="one-time">One-time donation</option>
+                            <option value="monthly">Monthly donation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="donation-amount">Amount (₹) *</label>
+                        <input type="number" id="donation-amount" name="donation-amount" min="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="donation-message">Message (Optional)</label>
+                        <textarea id="donation-message" name="donation-message" rows="3" placeholder="Share a message of support..."></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="anonymous" name="anonymous">
+                        <label for="anonymous">Donate anonymously</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Receive updates about our work</label>
+                    </div>
+                    <button type="button" class="donate-submit-btn" onclick="scrollToPayment()">
+                        <i class="fas fa-heart"></i>
+                        Proceed to Payment
+                    </button>
+                    
+                    <!-- Test Donation Button (for demonstration) -->
+                    <button type="button" class="test-donation-btn" onclick="testDonation()">
+                        <i class="fas fa-flask"></i>
+                        Test Donation (Demo)
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stories -->
+    <section class="impact-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Impact</h2>
+                <p class="section-subtitle">See how your donations are making a difference</p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Home Care Support" class="story-photo">
+                    </div>
+                    <div class="story-content">
+                        <div class="story-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>Home Care Support</h4>
+                        <p>"Your ₹500 donation provides a month's worth of medical supplies for a family in need."</p>
+                        <div class="story-impact">
+                            <span class="impact-number">₹500</span>
+                            <span class="impact-text">= 1 month of care</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Educational Support" class="story-photo">
+                    </div>
+                    <div class="story-content">
+                        <div class="story-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Educational Support</h4>
+                        <p>"Your ₹1,000 helps us provide educational assistance to children of patients."</p>
+                        <div class="story-impact">
+                            <span class="impact-number">₹1,000</span>
+                            <span class="impact-text">= 1 child's education</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Nutritional Support" class="story-photo">
+                    </div>
+                    <div class="story-content">
+                        <div class="story-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>Nutritional Support</h4>
+                        <p>"Your ₹2,500 provides monthly rice kits for 5 families struggling with financial difficulties."</p>
+                        <div class="story-impact">
+                            <span class="impact-number">₹2,500</span>
+                            <span class="impact-text">= 5 families fed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section id="payment-methods" class="payment-methods">
+        <div class="container">
+            <div class="section-header">
+                <h2>Payment Methods</h2>
+                <p class="section-subtitle">Choose your preferred payment method</p>
+            </div>
+            
+            <!-- Active Payment Methods Grid -->
+            <div class="active-payment-methods">
+                <!-- UPI Payment Section -->
+            <div class="payment-card">
+                <div class="payment-header">
+                    <div class="payment-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="payment-title">
+                        <h3>UPI Payment</h3>
+                        <span class="recommended-badge">Recommended</span>
+                    </div>
+                </div>
+                <div class="payment-content">
+                    <p class="payment-description">Scan QR code or use UPI ID for instant payment</p>
+                    
+                    <!-- QR Code Section -->
+                    <div class="qr-section">
+                        <div class="qr-placeholder">
+                            <i class="fas fa-qrcode"></i>
+                            <p>QR Code</p>
+                            <small>Scan with any UPI app</small>
+                        </div>
+                    </div>
+                    
+                    <!-- UPI Details -->
+                    <div class="upi-details">
+                        <div class="upi-item">
+                            <label>UPI ID:</label>
+                            <div class="copy-field">
+                                <span class="upi-value">karunya.palliative@paytm</span>
+                                <button class="copy-btn" onclick="copyToClipboard('karunya.palliative@paytm')">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="upi-item">
+                            <label>Account Name:</label>
+                            <span class="upi-value">Karunya Palliative Care Society</span>
+                        </div>
+                        <div class="upi-item">
+                            <label>Bank:</label>
+                            <span class="upi-value">State Bank of India</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Steps -->
+                    <div class="quick-steps">
+                        <h5>Quick Steps:</h5>
+                        <ol>
+                            <li>Scan QR code or enter UPI ID</li>
+                            <li>Enter donation amount</li>
+                            <li>Add note: "Donation for Karunya"</li>
+                            <li>Complete payment</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bank Transfer Section -->
+            <div class="payment-card">
+                <div class="payment-header">
+                    <div class="payment-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="payment-title">
+                        <h3>Bank Transfer</h3>
+                        <span class="secure-badge">Secure</span>
+                    </div>
+                </div>
+                <div class="payment-content">
+                    <p class="payment-description">Direct bank transfer or NEFT/RTGS</p>
+                    
+                    <!-- Bank Details -->
+                    <div class="bank-details">
+                        <div class="bank-item">
+                            <label>Account Name:</label>
+                            <div class="copy-field">
+                                <span class="bank-value">Karunya Palliative Care Society</span>
+                                <button class="copy-btn" onclick="copyToClipboard('Karunya Palliative Care Society')">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bank-item">
+                            <label>Account Number:</label>
+                            <div class="copy-field">
+                                <span class="bank-value">1234567890123456</span>
+                                <button class="copy-btn" onclick="copyToClipboard('1234567890123456')">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bank-item">
+                            <label>IFSC Code:</label>
+                            <div class="copy-field">
+                                <span class="bank-value">SBIN0001234</span>
+                                <button class="copy-btn" onclick="copyToClipboard('SBIN0001234')">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bank-item">
+                            <label>Bank:</label>
+                            <span class="bank-value">State Bank of India</span>
+                        </div>
+                        <div class="bank-item">
+                            <label>Branch:</label>
+                            <span class="bank-value">Anthikad Branch, Thrissur</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Instructions -->
+                    <div class="quick-instructions">
+                        <h5>Instructions:</h5>
+                        <ul>
+                            <li>Use NEFT/RTGS for instant transfer</li>
+                            <li>Add reference: "Donation - [Your Name]"</li>
+                            <li>Email receipt to: karunya.palliative@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Coming Soon Section -->
+            <div class="coming-soon-section">
+                <div class="coming-soon-card">
+                    <div class="coming-soon-header">
+                        <div class="coming-soon-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>More Payment Options</h3>
+                    </div>
+                    <div class="coming-soon-content">
+                        <p>We're working on integrating secure online payment gateways. Stay tuned!</p>
+                        <div class="features-preview">
+                            <span class="feature-tag">Credit/Debit Cards</span>
+                            <span class="feature-tag">Net Banking</span>
+                            <span class="feature-tag">Wallets</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Confirmation -->
+    <section class="donation-confirmation">
+        <div class="container">
+            <div class="confirmation-content">
+                <h2>After Making Your Donation</h2>
+                <div class="confirmation-steps">
+                    <div class="confirmation-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Make Your Payment</h4>
+                            <p>Use any of the payment methods above to make your donation</p>
+                        </div>
+                    </div>
+                    <div class="confirmation-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Send Payment Proof</h4>
+                            <p>Email us the payment screenshot/receipt at <strong>karunya.palliative@gmail.com</strong></p>
+                        </div>
+                    </div>
+                    <div class="confirmation-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Receive Confirmation</h4>
+                            <p>We'll send you a donation receipt and tax exemption certificate (if applicable)</p>
+                        </div>
+                    </div>
+                    <div class="confirmation-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Track Impact</h4>
+                            <p>Receive updates on how your donation is making a difference</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="confirmation-info">
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <h4>Important Information</h4>
+                            <ul>
+                                <li>Please mention "Donation for Karunya Palliative Care" in your payment reference</li>
+                                <li>Include your full name and contact details in the email</li>
+                                <li>Donations above ₹500 are eligible for tax deduction under 80G</li>
+                                <li>We'll send the receipt within 2-3 business days</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Donors -->
+    <section class="recent-donors">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Supporters</h2>
+                <p class="section-subtitle">Thank you to our latest donors</p>
+            </div>
+            <div class="recent-donors-grid">
+                <div class="recent-donor-item">
+                    <div class="donor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="donor-details">
+                        <span class="donor-name">Dr. Priya Nair</span>
+                        <span class="donor-amount">₹5,000</span>
+                        <span class="donor-time">2 hours ago</span>
+                    </div>
+                </div>
+                <div class="recent-donor-item">
+                    <div class="donor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="donor-details">
+                        <span class="donor-name">Anonymous</span>
+                        <span class="donor-amount">₹1,000</span>
+                        <span class="donor-time">5 hours ago</span>
+                    </div>
+                </div>
+                <div class="recent-donor-item">
+                    <div class="donor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="donor-details">
+                        <span class="donor-name">Rajesh Kumar</span>
+                        <span class="donor-amount">₹2,500</span>
+                        <span class="donor-time">1 day ago</span>
+                    </div>
+                </div>
+                <div class="recent-donor-item">
+                    <div class="donor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="donor-details">
+                        <span class="donor-name">Sunitha Menon</span>
+                        <span class="donor-amount">₹500</span>
+                        <span class="donor-time">2 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Security -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-content">
+                <h2>Your Trust Matters</h2>
+                <div class="trust-features">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Secure Payments</h4>
+                        <p>All transactions are encrypted and secure</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Transparent Use</h4>
+                        <p>100% of donations go directly to patient care</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-receipt"></i>
+                        <h4>Tax Benefits</h4>
+                        <p>Eligible for tax deduction under 80G</p>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Receipt & Updates</h4>
+                        <p>Receive donation receipt and impact updates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Karunya Palliative Care</h3>
+                            <p>Puthenpeedika, Anthikad</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Providing compassionate palliative care to the community through community participation and support.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Puthenpeedika, Anthikad</p>
+                        <p><i class="fas fa-phone"></i> +91-XXX-XXX XXXX</p>
+                        <p><i class="fas fa-envelope"></i> karunya.palliative@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Karunya Palliative Care Puthenpeedika. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for the community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

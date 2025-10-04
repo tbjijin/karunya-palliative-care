@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karunya Palliative Care - Puthenpeedika, Anthikad</title>
+    <meta name="description" content="Karunya Palliative Care provides compassionate care for the needy people in and around Anthikad. Support our mission of adding life to days.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h2>Karunya Palliative Care</h2>
+                        <p>Puthenpeedika, Anthikad</p>
+                    </div>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#donors" class="nav-link">Supporters</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & News</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="donate.html" class="donate-btn">Donate Now</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-layout">
+                    <!-- Left Side - Main Content -->
+                    <div class="hero-main">
+                        <h1 class="hero-title">DONATE FOR A NOBLE CAUSE</h1>
+                        <p class="hero-subtitle">Supporting palliative care for the needy people in and around Anthikad</p>
+                        <p class="hero-description">
+                            Your individual donations, beginning from as small as Rupees five, 
+                            make Karunya Palliative Care a true People's Movement in Palliative Care.
+                        </p>
+                            <div class="hero-buttons">
+                                <a href="donate.html" class="cta-button primary">Donate</a>
+                            </div>
+                    </div>
+                    
+                    <!-- Right Side - Care Images Carousel -->
+                    <div class="hero-carousel">
+                        <div class="care-carousel">
+                            <div class="carousel-container">
+                                <div class="carousel-track" id="carouselTrack">
+                                    <div class="carousel-slide active">
+                                        <div class="care-image">
+                                            <img src="images/home-care-team.jpeg" alt="Home Care Team" class="care-photo">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="carousel-slide">
+                                        <div class="care-image">
+                                            <img src="images/family-support.png" alt="Family Support" class="care-photo">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="carousel-slide">
+                                        <div class="care-image">
+                                            <img src="images/medical-care.png" alt="Medical Care" class="care-photo">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="carousel-slide">
+                                        <div class="care-image">
+                                            <img src="images/community-care.png" alt="Community Care" class="care-photo">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="carousel-slide">
+                                        <div class="care-image">
+                                            <img src="images/child-care.png" alt="Child Care" class="care-photo">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Carousel Navigation -->
+                                <div class="carousel-nav">
+                                    <button class="carousel-btn prev" onclick="changeSlide(-1)">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="carousel-btn next" onclick="changeSlide(1)">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                                
+                                <!-- Carousel Indicators -->
+                                <div class="carousel-indicators">
+                                    <span class="indicator active" onclick="currentSlide(1)"></span>
+                                    <span class="indicator" onclick="currentSlide(2)"></span>
+                                    <span class="indicator" onclick="currentSlide(3)"></span>
+                                    <span class="indicator" onclick="currentSlide(4)"></span>
+                                    <span class="indicator" onclick="currentSlide(5)"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="about" class="mission">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission</h2>
+                <p class="section-subtitle">Adding life to days, not days to life</p>
+            </div>
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h3>"Adding life to days"</h3>
+                    <p>
+                        To improve the quality of life of people suffering from prolonged debilitating illness 
+                        by providing the best possible holistic care made affordable and acceptable through 
+                        community participation and also helping the affected families.
+                    </p>
+                    <div class="mission-values">
+                        <div class="value-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>Compassionate Care</h4>
+                            <p>Providing emotional and spiritual support alongside medical care</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Community Driven</h4>
+                            <p>Built by the community, for the community</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h4>Free Service</h4>
+                            <p>No cost to patients and families in need</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p class="section-subtitle">Comprehensive care for patients and families</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Home Care" class="service-photo">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home Care</h3>
+                        <p>We care where you are. Our home care teams visit patients regularly with medicines and necessary medical equipment.</p>
+                        <ul class="service-features">
+                            <li>Regular medical visits</li>
+                            <li>Free medical equipment</li>
+                            <li>Family guidance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Outpatient Clinic" class="service-photo">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h3>Outpatient Clinic</h3>
+                        <p>Our clinic is open Monday to Saturday, providing comprehensive care and emotional support to patients and families.</p>
+                        <ul class="service-features">
+                            <li>Monday to Saturday</li>
+                            <li>9:30 AM - 4:30 PM</li>
+                            <li>Emotional support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Hospice & Daycare" class="service-photo">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Hospice & Daycare</h3>
+                        <p>Providing shelter for patients who need prolonged treatment and daycare services for working families.</p>
+                        <ul class="service-features">
+                            <li>24/7 care facility</li>
+                            <li>Daycare services</li>
+                            <li>Family support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Physiotherapy" class="service-photo">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Physiotherapy</h3>
+                        <p>Improving the physical condition of bedridden patients through proper physiotherapy sessions.</p>
+                        <ul class="service-features">
+                            <li>Monday to Friday</li>
+                            <li>Specialized therapy</li>
+                            <li>Mobility improvement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Peer Support Groups" class="service-photo">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Peer Support Groups</h3>
+                        <p>Regular interaction groups for patients and families to share experiences and receive emotional support.</p>
+                        <ul class="service-features">
+                            <li>Regular meetings</li>
+                            <li>Emotional support</li>
+                            <li>Community bonding</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Rehabilitation" class="service-photo">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Rehabilitation</h3>
+                        <p>Supporting patients and families through rehabilitation programs and economic assistance.</p>
+                        <ul class="service-features">
+                            <li>Economic support</li>
+                            <li>Educational assistance</li>
+                            <li>Self-employment programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Impact</h2>
+                <p class="section-subtitle">Making a difference in the community</p>
+            </div>
+            <div class="impact-content">
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>We care where you are, The journey starts here</h3>
+                            <p>Our home care teams visit patients in their homes with medicines and all necessary medical equipment. We provide wheelchairs, crutches, and other aids free of cost to those in need.</p>
+                            <div class="impact-image">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Home care team visiting patient's family">
+                                <div class="image-caption">
+                                    <small>📷 Home care team visiting a patient's family</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Wherever the art of medicine is loved, there is also a love of humanity</h3>
+                            <p>We perform procedures like injections and catheterization during home visits, saving patients from hospital visits. We guide families in wound care, medication, and diet.</p>
+                            <div class="impact-image">
+                                <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Medical professionals providing compassionate care">
+                                <div class="image-caption">
+                                    <small>📷 Medical professionals providing compassionate care</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Palliative care includes physical, spiritual, emotional elements</h3>
+                            <p>We understand the mental, emotional, and social problems faced by patients, their family members, and caregivers, providing comprehensive support.</p>
+                            <div class="impact-image">
+                                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Holistic care approach - mind, body, and spirit">
+                                <div class="image-caption">
+                                    <small>📷 Holistic care approach - mind, body, and spirit</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="impact-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Stories from the heart - Volunteers are integral to our care</h3>
+                            <p>For financially backward families, we provide monthly rice kits and educational assistance ranging from Rs 300 to Rs 2000 for their children.</p>
+                            <div class="impact-image">
+                                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Community volunteers supporting families in need">
+                                <div class="image-caption">
+                                    <small>📷 Community volunteers supporting families in need</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donors Section -->
+    <section id="donors" class="donors-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Generous Supporters</h2>
+                <p class="section-subtitle">Thank you to all who have supported our mission</p>
+            </div>
+            <div class="donors-content">
+                <div class="donors-stats">
+                    <div class="donor-stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Individual Donors</span>
+                    </div>
+                    <div class="donor-stat">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Corporate Partners</span>
+                    </div>
+                </div>
+                
+                <div class="donors-grid">
+                    <div class="donor-category">
+                        <h3>Major Donors (₹10,000+)</h3>
+                        <div class="donor-list">
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Dr. Rajesh Kumar</span>
+                                    <span class="donor-amount">₹25,000</span>
+                                </div>
+                                <span class="donor-message">"Supporting compassionate care in our community"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Kerala Medical Association</span>
+                                    <span class="donor-amount">₹50,000</span>
+                                </div>
+                                <span class="donor-message">"Proud to support palliative care initiatives"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Anita Menon</span>
+                                    <span class="donor-amount">₹15,000</span>
+                                </div>
+                                <span class="donor-message">"In memory of my beloved father"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Thrissur Rotary Club</span>
+                                    <span class="donor-amount">₹30,000</span>
+                                </div>
+                                <span class="donor-message">"Service above self - supporting our community"</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="donor-category">
+                        <h3>Recurrent Donors</h3>
+                        <div class="donor-list">
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Priya Suresh</span>
+                                    <span class="donor-amount">₹5,000</span>
+                                </div>
+                                <span class="donor-message">"Monthly supporter - every life matters"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Vijay Nair</span>
+                                    <span class="donor-amount">₹3,000</span>
+                                </div>
+                                <span class="donor-message">"Supporting dignity in care"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Sunitha Krishnan</span>
+                                    <span class="donor-amount">₹2,500</span>
+                                </div>
+                                <span class="donor-message">"Making a difference, one donation at a time"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Anonymous</span>
+                                    <span class="donor-amount">₹1,000</span>
+                                </div>
+                                <span class="donor-message">"Supporting the cause quietly"</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="donor-category">
+                        <h3>Recent Donors</h3>
+                        <div class="donor-list">
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Ramesh Pillai</span>
+                                    <span class="donor-amount">₹500</span>
+                                </div>
+                                <span class="donor-message">"Small contribution, big impact"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Lakshmi Devi</span>
+                                    <span class="donor-amount">₹300</span>
+                                </div>
+                                <span class="donor-message">"Every rupee counts"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Suresh Kumar</span>
+                                    <span class="donor-amount">₹200</span>
+                                </div>
+                                <span class="donor-message">"Supporting our community"</span>
+                            </div>
+                            <div class="donor-item">
+                                <div class="donor-info">
+                                    <span class="donor-name">Anonymous</span>
+                                    <span class="donor-amount">₹100</span>
+                                </div>
+                                <span class="donor-message">"Every little helps"</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donors-actions">
+                    <button class="view-all-donors-btn" onclick="openDonorsModal()">
+                        <i class="fas fa-list"></i>
+                        View Complete Donors List
+                    </button>
+                    
+                    <!-- Admin Panel (for demonstration) -->
+                    <div class="admin-panel" style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #4a90e2;">
+                        <h4 style="margin: 0 0 1rem 0; color: #333; font-size: 1rem;">Admin Panel (Demo)</h4>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <button onclick="testDonation()" style="background: #27ae60; color: white; border: none; padding: 8px 12px; border-radius: 4px; font-size: 0.8rem; cursor: pointer;">
+                                <i class="fas fa-plus"></i> Add Test Donor
+                            </button>
+                            <button onclick="addSampleDonors()" style="background: #4a90e2; color: white; border: none; padding: 8px 12px; border-radius: 4px; font-size: 0.8rem; cursor: pointer;">
+                                <i class="fas fa-users"></i> Add Sample Donors
+                            </button>
+                            <button onclick="exportDonors()" style="background: #f39c12; color: white; border: none; padding: 8px 12px; border-radius: 4px; font-size: 0.8rem; cursor: pointer;">
+                                <i class="fas fa-download"></i> Export CSV
+                            </button>
+                            <button onclick="clearAllDonors()" style="background: #e74c3c; color: white; border: none; padding: 8px 12px; border-radius: 4px; font-size: 0.8rem; cursor: pointer;">
+                                <i class="fas fa-trash"></i> Clear All
+                            </button>
+                        </div>
+                        <p style="margin: 0.5rem 0 0 0; font-size: 0.75rem; color: #666;">
+                            <i class="fas fa-info-circle"></i> This admin panel is for demonstration purposes. In production, this would be password-protected.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="donors-note">
+                    <div class="note-content">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h4>Join Our Community of Supporters</h4>
+                            <p>Every donation, no matter the size, makes a real difference in someone's life. Your support helps us provide free palliative care to those who need it most.</p>
+                            <a href="donate.html" class="cta-button primary">Become a Supporter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Our Mission</h2>
+                <p>Your support helps us provide free palliative care to those who need it most. Every donation, no matter how small, makes a difference.</p>
+                <div class="cta-buttons">
+                    <a href="donate.html" class="cta-button primary large">Donate Now</a>
+                    <a href="#contact" class="cta-button secondary large">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p class="section-subtitle">Get in touch with us</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>Karunya Palliative Care<br>Puthenpeedika, Anthikad<br>Kerala, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91-XXX-XXX XXXX</p>
+                            <p>Emergency: +91-XXX-XXX XXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>karunya.palliative@gmail.com</p>
+                            <p>info@karunyapalliative.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Saturday: 9:30 AM - 4:30 PM</p>
+                            <p>Emergency care: 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Karunya Palliative Care</h3>
+                            <p>Puthenpeedika, Anthikad</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Providing compassionate palliative care to the community through community participation and support.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Home Care</a></li>
+                        <li><a href="#services">Outpatient Clinic</a></li>
+                        <li><a href="#services">Hospice & Daycare</a></li>
+                        <li><a href="#services">Physiotherapy</a></li>
+                        <li><a href="#services">Peer Support Groups</a></li>
+                        <li><a href="#services">Rehabilitation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate Now</a></li>
+                        <li><a href="#contact">Volunteer</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#impact">Our Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Puthenpeedika, Anthikad</p>
+                        <p><i class="fas fa-phone"></i> +91-XXX-XXX XXXX</p>
+                        <p><i class="fas fa-envelope"></i> karunya.palliative@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Karunya Palliative Care Puthenpeedika. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for the community</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Complete Donors Modal -->
+    <div id="donorsModal" class="donors-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Complete Donors List</h2>
+                <button class="close-modal" onclick="closeDonorsModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="donors-tabs">
+                    <button class="tab-btn active" onclick="showDonorTab('major')">Major Donors (₹10,000+)</button>
+                    <button class="tab-btn" onclick="showDonorTab('recurrent')">Recurrent Donors</button>
+                    <button class="tab-btn" onclick="showDonorTab('recent')">Recent Donors</button>
+                </div>
+                
+                <div id="major-donors" class="donor-tab-content active">
+                    <div class="donors-list-expanded">
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Kerala Medical Association</span>
+                                <span class="donor-amount">₹50,000</span>
+                            </div>
+                            <span class="donor-message">"Proud to support palliative care initiatives"</span>
+                            <span class="donor-date">March 2024</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Dr. Rajesh Kumar</span>
+                                <span class="donor-amount">₹25,000</span>
+                            </div>
+                            <span class="donor-message">"Supporting compassionate care in our community"</span>
+                            <span class="donor-date">February 2024</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Thrissur Rotary Club</span>
+                                <span class="donor-amount">₹30,000</span>
+                            </div>
+                            <span class="donor-message">"Service above self - supporting our community"</span>
+                            <span class="donor-date">February 2024</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Anita Menon</span>
+                                <span class="donor-amount">₹15,000</span>
+                            </div>
+                            <span class="donor-message">"In memory of my beloved father"</span>
+                            <span class="donor-date">January 2024</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Dr. Sunitha Nair</span>
+                                <span class="donor-amount">₹12,000</span>
+                            </div>
+                            <span class="donor-message">"Supporting healthcare excellence"</span>
+                            <span class="donor-date">January 2024</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Kerala Nurses Association</span>
+                                <span class="donor-amount">₹18,000</span>
+                            </div>
+                            <span class="donor-message">"Standing with our community"</span>
+                            <span class="donor-date">December 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="recurrent-donors" class="donor-tab-content">
+                    <div class="donors-list-expanded">
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Priya Suresh</span>
+                                <span class="donor-amount">₹5,000/month</span>
+                            </div>
+                            <span class="donor-message">"Monthly supporter - every life matters"</span>
+                            <span class="donor-date">Since January 2024</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Vijay Nair</span>
+                                <span class="donor-amount">₹3,000/month</span>
+                            </div>
+                            <span class="donor-message">"Supporting dignity in care"</span>
+                            <span class="donor-date">Since December 2023</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Sunitha Krishnan</span>
+                                <span class="donor-amount">₹2,500/month</span>
+                            </div>
+                            <span class="donor-message">"Making a difference, one donation at a time"</span>
+                            <span class="donor-date">Since November 2023</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Ramesh Pillai</span>
+                                <span class="donor-amount">₹1,000/month</span>
+                            </div>
+                            <span class="donor-message">"Small contribution, big impact"</span>
+                            <span class="donor-date">Since October 2023</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Lakshmi Devi</span>
+                                <span class="donor-amount">₹500/month</span>
+                            </div>
+                            <span class="donor-message">"Every rupee counts"</span>
+                            <span class="donor-date">Since September 2023</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Suresh Kumar</span>
+                                <span class="donor-amount">₹800/month</span>
+                            </div>
+                            <span class="donor-message">"Supporting our community"</span>
+                            <span class="donor-date">Since August 2023</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Anonymous</span>
+                                <span class="donor-amount">₹1,200/month</span>
+                            </div>
+                            <span class="donor-message">"Supporting the cause quietly"</span>
+                            <span class="donor-date">Since July 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="recent-donors" class="donor-tab-content">
+                    <div class="donors-list-expanded">
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Dr. Priya Nair</span>
+                                <span class="donor-amount">₹5,000</span>
+                            </div>
+                            <span class="donor-message">"Supporting compassionate care"</span>
+                            <span class="donor-date">2 hours ago</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Anonymous</span>
+                                <span class="donor-amount">₹1,000</span>
+                            </div>
+                            <span class="donor-message">"Every little helps"</span>
+                            <span class="donor-date">5 hours ago</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Rajesh Kumar</span>
+                                <span class="donor-amount">₹2,500</span>
+                            </div>
+                            <span class="donor-message">"Making a difference"</span>
+                            <span class="donor-date">1 day ago</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Sunitha Menon</span>
+                                <span class="donor-amount">₹500</span>
+                            </div>
+                            <span class="donor-message">"Supporting the cause"</span>
+                            <span class="donor-date">2 days ago</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Vijay Pillai</span>
+                                <span class="donor-amount">₹750</span>
+                            </div>
+                            <span class="donor-message">"Community support"</span>
+                            <span class="donor-date">3 days ago</span>
+                        </div>
+                        <div class="donor-item-expanded">
+                            <div class="donor-info">
+                                <span class="donor-name">Anonymous</span>
+                                <span class="donor-amount">₹300</span>
+                            </div>
+                            <span class="donor-message">"Every contribution matters"</span>
+                            <span class="donor-date">4 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

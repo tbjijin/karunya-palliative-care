@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & News - Karunya Palliative Care</title>
+    <meta name="description" content="Stay updated with the latest news, stories, and updates from Karunya Palliative Care Puthenpeedika. Read about our impact, community stories, and healthcare insights.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h2>Karunya Palliative Care</h2>
+                        <p>Puthenpeedika, Anthikad</p>
+                    </div>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#donors" class="nav-link">Supporters</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog & News</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="donate.html" class="donate-btn">Donate Now</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content">
+                <h1>Blog & News</h1>
+                <p>Stay updated with our latest stories, community impact, and healthcare insights</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-content">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Featured Article">
+                    <div class="article-badge">Featured</div>
+                </div>
+                <div class="featured-text">
+                    <div class="article-meta">
+                        <span class="article-date">October 5, 2024</span>
+                        <span class="article-category">Community Impact</span>
+                    </div>
+                    <h2>Celebrating 500+ Families Helped: A Journey of Compassion and Care</h2>
+                    <p class="article-excerpt">This month marks a significant milestone for Karunya Palliative Care as we celebrate reaching 500+ families served in and around Anthikad. Our journey has been one of unwavering commitment to providing compassionate care to those who need it most...</p>
+                    
+                    <div class="article-full-content" style="display: none;">
+                        <p>This month marks a significant milestone for Karunya Palliative Care as we celebrate reaching 500+ families served in and around Anthikad. Our journey has been one of unwavering commitment to providing compassionate care to those who need it most.</p>
+                        
+                        <p>When we started this humble initiative five years ago, we never imagined the profound impact we would have on our community. Each family we serve represents a story of hope, resilience, and the power of compassionate care during life's most challenging moments.</p>
+                        
+                        <h4>Our Impact in Numbers</h4>
+                        <ul>
+                            <li>500+ families served across Anthikad and surrounding areas</li>
+                            <li>1,200+ home visits conducted this year alone</li>
+                            <li>50+ trained volunteers actively supporting our mission</li>
+                            <li>95% patient satisfaction rate based on family feedback</li>
+                        </ul>
+                        
+                        <p>What makes this achievement even more meaningful is the personal connections we've built with each family. From providing medical care and emotional support to helping with daily activities and offering spiritual comfort, our team has been there every step of the way.</p>
+                        
+                        <h4>Stories That Inspire</h4>
+                        <p>Mrs. Lakshmi, whose family we've been supporting for over two years, recently shared: "Karunya Palliative Care didn't just provide medical support; they became part of our family. Their compassion and dedication gave us strength during our darkest days."</p>
+                        
+                        <p>As we celebrate this milestone, we're reminded that every number represents a real person, a real family, and a real story of hope. We're grateful for the trust our community has placed in us and look forward to serving many more families in the years to come.</p>
+                        
+                        <p><strong>Thank you to all our supporters, volunteers, and the families who have allowed us to be part of their journey. Together, we're making a difference, one family at a time.</strong></p>
+                    </div>
+                    
+                    <a href="#" class="read-more-btn" onclick="toggleArticle(this)">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="categories-nav">
+                <button class="category-btn active" data-category="all">All Posts</button>
+                <button class="category-btn" data-category="community">Community Impact</button>
+                <button class="category-btn" data-category="healthcare">Healthcare Insights</button>
+                <button class="category-btn" data-category="stories">Patient Stories</button>
+                <button class="category-btn" data-category="updates">Updates</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="posts-grid">
+                <!-- Article 1 -->
+                <article class="blog-card" data-category="community">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Community Support">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-date">October 3, 2024</span>
+                            <span class="article-category">Community Impact</span>
+                        </div>
+                        <h3>Building Bridges: How Our Community Comes Together</h3>
+                        <p class="article-excerpt">Discover how local volunteers and healthcare professionals work hand in hand to provide comprehensive palliative care services...</p>
+                        
+                        <div class="article-full-content" style="display: none;">
+                            <p>Discover how local volunteers and healthcare professionals work hand in hand to provide comprehensive palliative care services that truly make a difference in our community.</p>
+                            
+                            <p>At Karunya Palliative Care, we believe that healing happens not just through medical intervention, but through the power of community. Our approach brings together diverse groups of people, each contributing their unique skills and compassion to create a comprehensive support network.</p>
+                            
+                            <h4>Our Community Partners</h4>
+                            <ul>
+                                <li><strong>Local Healthcare Professionals:</strong> Doctors, nurses, and therapists who volunteer their expertise</li>
+                                <li><strong>Community Volunteers:</strong> Neighbors and friends who provide emotional support and practical help</li>
+                                <li><strong>Religious Leaders:</strong> Offering spiritual guidance and comfort during difficult times</li>
+                                <li><strong>Local Businesses:</strong> Contributing resources and support for our programs</li>
+                            </ul>
+                            
+                            <p>This collaborative approach ensures that families receive not just medical care, but emotional, spiritual, and practical support that addresses all aspects of their needs. Together, we're building a stronger, more compassionate community.</p>
+                        </div>
+                        
+                        <a href="#" class="read-more-link" onclick="toggleArticle(this)">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card" data-category="healthcare">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Healthcare Insights">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-date">October 1, 2024</span>
+                            <span class="article-category">Healthcare Insights</span>
+                        </div>
+                        <h3>Understanding Palliative Care: A Guide for Families</h3>
+                        <p class="article-excerpt">Learn about the essential aspects of palliative care and how it can improve quality of life for patients and their families...</p>
+                        
+                        <div class="article-full-content" style="display: none;">
+                            <p>Learn about the essential aspects of palliative care and how it can improve quality of life for patients and their families during challenging health circumstances.</p>
+                            
+                            <p>Palliative care is specialized medical care for people living with serious illnesses. It focuses on providing relief from symptoms and stress, with the goal of improving quality of life for both the patient and their family.</p>
+                            
+                            <h4>Key Principles of Palliative Care</h4>
+                            <ul>
+                                <li><strong>Pain and Symptom Management:</strong> Addressing physical discomfort and side effects</li>
+                                <li><strong>Emotional Support:</strong> Counseling and psychological support for patients and families</li>
+                                <li><strong>Spiritual Care:</strong> Addressing spiritual and existential concerns</li>
+                                <li><strong>Family Support:</strong> Helping families cope with caregiving challenges</li>
+                            </ul>
+                            
+                            <p>At Karunya Palliative Care, we believe that every family deserves compassionate, comprehensive care that addresses not just medical needs, but emotional and spiritual well-being as well.</p>
+                        </div>
+                        
+                        <a href="#" class="read-more-link" onclick="toggleArticle(this)">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card" data-category="stories">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Patient Story">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-date">September 28, 2024</span>
+                            <span class="article-category">Patient Stories</span>
+                        </div>
+                        <h3>Rekha's Journey: Finding Hope in Difficult Times</h3>
+                        <p class="article-excerpt">A touching story of how our care team helped Rekha and her family navigate through challenging health circumstances...</p>
+                        
+                        <div class="article-full-content" style="display: none;">
+                            <p>A touching story of how our care team helped Rekha and her family navigate through challenging health circumstances with compassion and hope.</p>
+                            
+                            <p>When Rekha was diagnosed with a serious illness, her family felt overwhelmed and uncertain about the future. That's when they reached out to Karunya Palliative Care, and our journey together began.</p>
+                            
+                            <h4>The Challenge</h4>
+                            <p>Rekha's condition required constant medical attention, but more importantly, her family needed emotional support and guidance on how to provide the best care at home. The financial burden was also a significant concern.</p>
+                            
+                            <h4>Our Response</h4>
+                            <p>Our team immediately sprang into action, providing:</p>
+                            <ul>
+                                <li>Regular home visits by our medical team</li>
+                                <li>Emotional counseling for the entire family</li>
+                                <li>Training for family members on care techniques</li>
+                                <li>Financial assistance through our support fund</li>
+                                <li>Spiritual guidance and comfort</li>
+                            </ul>
+                            
+                            <h4>The Transformation</h4>
+                            <p>Over the months, we witnessed a remarkable transformation. Rekha's family became confident caregivers, and most importantly, they found hope and meaning in their journey together.</p>
+                            
+                            <p>"Karunya didn't just help us with medical care," Rekha's daughter shared. "They helped us find strength we didn't know we had and showed us that even in difficult times, there can be moments of joy and connection."</p>
+                            
+                            <p>Today, Rekha's family continues to be part of our extended Karunya family, often volunteering to support other families going through similar challenges.</p>
+                        </div>
+                        
+                        <a href="#" class="read-more-link" onclick="toggleArticle(this)">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card" data-category="updates">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Updates">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-date">September 25, 2024</span>
+                            <span class="article-category">Updates</span>
+                        </div>
+                        <h3>New Equipment Donation: Enhancing Our Care Services</h3>
+                        <p class="article-excerpt">Thanks to generous donations, we've been able to acquire new medical equipment that will improve our patient care capabilities...</p>
+                        
+                        <div class="article-full-content" style="display: none;">
+                            <p>Thanks to generous donations from our community and supporters, we've been able to acquire new medical equipment that will significantly improve our patient care capabilities and expand our services.</p>
+                            
+                            <h4>New Equipment Received</h4>
+                            <ul>
+                                <li><strong>Portable Oxygen Concentrators:</strong> 3 units for home care patients</li>
+                                <li><strong>Digital Blood Pressure Monitors:</strong> 5 units for accurate monitoring</li>
+                                <li><strong>Hospital Beds:</strong> 2 adjustable beds for comfort care</li>
+                                <li><strong>Wheelchairs:</strong> 4 lightweight, foldable wheelchairs</li>
+                                <li><strong>Medical Supplies:</strong> Bandages, medications, and first aid supplies</li>
+                            </ul>
+                            
+                            <h4>Impact on Our Services</h4>
+                            <p>This new equipment allows us to:</p>
+                            <ul>
+                                <li>Provide better home care services</li>
+                                <li>Reduce the need for hospital visits</li>
+                                <li>Improve patient comfort and quality of life</li>
+                                <li>Support more families in our community</li>
+                            </ul>
+                            
+                            <p>We're deeply grateful to all our donors who made this possible. Your generosity directly translates to better care for our patients and their families.</p>
+                        </div>
+                        
+                        <a href="#" class="read-more-link" onclick="toggleArticle(this)">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card" data-category="community">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Community Event">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-date">September 22, 2024</span>
+                            <span class="article-category">Community Impact</span>
+                        </div>
+                        <h3>Annual Health Camp: Serving 200+ Community Members</h3>
+                        <p class="article-excerpt">Our recent health camp brought together healthcare professionals and community members for a day of comprehensive health services...</p>
+                        <a href="#" class="read-more-link" onclick="toggleArticle(this)">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card" data-category="healthcare">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Healthcare Training">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-date">September 20, 2024</span>
+                            <span class="article-category">Healthcare Insights</span>
+                        </div>
+                        <h3>Training Session: Empowering Caregivers with New Skills</h3>
+                        <p class="article-excerpt">Our latest training session equipped caregivers with advanced techniques for providing compassionate palliative care...</p>
+                        <a href="#" class="read-more-link" onclick="toggleArticle(this)">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest news, stories, and updates from Karunya Palliative Care</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <span class="brand-text">Karunya Palliative Care</span>
+                    </div>
+                    <p class="footer-description">Providing compassionate palliative care to the community through community participation and support.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="blog.html">Blog & News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Puthenpeedika, Anthikad, Kerala</p>
+                        <p><i class="fas fa-phone"></i> +91 123 456 7890</p>
+                        <p><i class="fas fa-envelope"></i> info@karunyapalliativecare.org</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Karunya Palliative Care Puthenpeedika. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
