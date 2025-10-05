@@ -681,6 +681,32 @@ p {
     box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
 }
 
+/* Clickable Service Cards */
+.service-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.service-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-link:hover .service-photo {
+    transform: scale(1.05);
+}
+
+.service-card-link:hover .service-link {
+    background: #357abd;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
 .service-card .service-icon {
     margin-top: -30px;
     position: relative;
