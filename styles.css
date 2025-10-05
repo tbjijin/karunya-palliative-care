@@ -661,25 +661,6 @@ p {
     transform: scale(1.05);
 }
 
-.service-link {
-    display: inline-block;
-    background: #4a90e2;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
-
-.service-link:hover {
-    background: #357abd;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
-}
 
 /* Clickable Service Cards */
 .service-card-link {
@@ -701,12 +682,6 @@ p {
     transform: scale(1.05);
 }
 
-.service-card-link:hover .service-link {
-    background: #357abd;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
-}
 
 /* Ensure clickable area covers entire card */
 .service-card-link * {
@@ -3582,21 +3557,6 @@ p {
     line-height: 1.6;
 }
 
-.service-link {
-    display: inline-block;
-    background: #4a90e2;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s ease;
-}
-
-.service-link:hover {
-    background: #357abd;
-    color: white;
-}
 
 /* Dropdown Menu Styles */
 .dropdown {
