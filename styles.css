@@ -1337,7 +1337,7 @@ p {
 
 /* Donation Page Styles */
 .donate-hero {
-    background: linear-gradient(135deg, #4a90e2, #357abd);
+    background: linear-gradient(135deg, #1e3a8a, #1e40af);
     color: white;
     padding: 120px 0 60px;
     text-align: center;
@@ -1346,6 +1346,16 @@ p {
 .donate-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: white;
+    font-weight: 700;
+}
+
+.donate-hero .hero-subtitle {
+    color: #e0f2fe !important;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    opacity: 0.95;
 }
 
 .impact-highlight {
@@ -1358,12 +1368,14 @@ p {
 
 .impact-item {
     text-align: center;
+    color: white;
 }
 
 .impact-item i {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     display: block;
+    color: #e0f2fe;
 }
 
 .impact-item span {
@@ -1371,6 +1383,14 @@ p {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
+    color: white;
+}
+
+.impact-item p {
+    color: #e0f2fe;
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.9;
 }
 
 .donation-options {
