@@ -687,6 +687,7 @@ p {
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .service-card-link:hover {
@@ -707,6 +708,15 @@ p {
     box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
 }
 
+/* Ensure clickable area covers entire card */
+.service-card-link * {
+    pointer-events: none;
+}
+
+.service-card-link {
+    pointer-events: auto;
+}
+
 .service-card .service-icon {
     margin-top: -30px;
     position: relative;
@@ -717,10 +727,7 @@ p {
     padding: 0 2rem 2rem;
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
+/* Removed conflicting .service-card:hover rule - now handled by .service-card-link:hover */
 
 .service-icon {
     width: 80px;
