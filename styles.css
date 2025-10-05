@@ -3598,6 +3598,91 @@ p {
     color: white;
 }
 
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-toggle i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-link:hover {
+    background: #f8f9fa;
+    color: #4a90e2;
+    border-left-color: #4a90e2;
+    text-decoration: none;
+}
+
+.dropdown-link.active {
+    background: #e3f2fd;
+    color: #4a90e2;
+    border-left-color: #4a90e2;
+    font-weight: 600;
+}
+
+.dropdown-link i {
+    width: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #4a90e2;
+}
+
+.dropdown-link span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
 /* Mobile Responsiveness for Service Pages */
 @media (max-width: 768px) {
     .service-hero h1 {
@@ -3627,6 +3712,31 @@ p {
     
     .related-services .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    /* Mobile Dropdown Styles */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: #f8f9fa;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        min-width: auto;
+    }
+    
+    .dropdown-link {
+        padding: 1rem 1.5rem;
+        border-left: none;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .dropdown-link:hover {
+        background: #e9ecef;
+        border-left: none;
     }
 }
 
