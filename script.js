@@ -486,6 +486,16 @@ class DonorManager {
         this.initializeDonorLists();
     }
 
+    // Generate random alphanumeric donor ID
+    generateDonorId() {
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let result = '';
+        for (let i = 0; i < 8; i++) {
+            result += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return result;
+    }
+
     // Load donors from localStorage or initialize with sample data
     loadDonors() {
         const storedDonors = localStorage.getItem('karunyaDonors');
@@ -493,33 +503,30 @@ class DonorManager {
             return JSON.parse(storedDonors);
         }
         
-        // Sample data for initial load
+        // Sample data for initial load with donor IDs
         return {
-            major: [
-                { name: "Kerala Medical Association", amount: 50000, message: "Proud to support palliative care initiatives", date: "March 2024", type: "one-time" },
-                { name: "Dr. Rajesh Kumar", amount: 25000, message: "Supporting compassionate care in our community", date: "February 2024", type: "one-time" },
-                { name: "Thrissur Rotary Club", amount: 30000, message: "Service above self - supporting our community", date: "February 2024", type: "one-time" },
-                { name: "Anita Menon", amount: 15000, message: "In memory of my beloved father", date: "January 2024", type: "one-time" },
-                { name: "Dr. Sunitha Nair", amount: 12000, message: "Supporting healthcare excellence", date: "January 2024", type: "one-time" },
-                { name: "Kerala Nurses Association", amount: 18000, message: "Standing with our community", date: "December 2023", type: "one-time" }
+            individual: [
+                { id: "KW001", name: "Dr. Priya Nair", amount: 5000, message: "Supporting compassionate care", date: "2 hours ago", type: "one-time" },
+                { id: "KW002", name: "Anonymous", amount: 1000, message: "Every little helps", date: "5 hours ago", type: "one-time" },
+                { id: "KW003", name: "Rajesh Kumar", amount: 2500, message: "Making a difference", date: "1 day ago", type: "one-time" },
+                { id: "KW004", name: "Sunitha Menon", amount: 500, message: "Supporting the cause", date: "2 days ago", type: "one-time" },
+                { id: "KW005", name: "Vijay Pillai", amount: 750, message: "Community support", date: "3 days ago", type: "one-time" },
+                { id: "KW006", name: "Anonymous", amount: 300, message: "Every contribution matters", date: "4 days ago", type: "one-time" },
+                { id: "KW007", name: "Priya Suresh", amount: 5000, message: "Monthly supporter - every life matters", date: "Since January 2024", type: "monthly" },
+                { id: "KW008", name: "Vijay Nair", amount: 3000, message: "Supporting dignity in care", date: "Since December 2023", type: "monthly" },
+                { id: "KW009", name: "Sunitha Krishnan", amount: 2500, message: "Making a difference, one donation at a time", date: "Since November 2023", type: "monthly" },
+                { id: "KW010", name: "Ramesh Pillai", amount: 1000, message: "Small contribution, big impact", date: "Since October 2023", type: "monthly" }
             ],
-            recurrent: [
-                { name: "Priya Suresh", amount: 5000, message: "Monthly supporter - every life matters", date: "Since January 2024", type: "monthly" },
-                { name: "Vijay Nair", amount: 3000, message: "Supporting dignity in care", date: "Since December 2023", type: "monthly" },
-                { name: "Sunitha Krishnan", amount: 2500, message: "Making a difference, one donation at a time", date: "Since November 2023", type: "monthly" },
-                { name: "Ramesh Pillai", amount: 1000, message: "Small contribution, big impact", date: "Since October 2023", type: "monthly" },
-                { name: "Lakshmi Devi", amount: 500, message: "Every rupee counts", date: "Since September 2023", type: "monthly" },
-                { name: "Suresh Kumar", amount: 800, message: "Supporting our community", date: "Since August 2023", type: "monthly" },
-                { name: "Anonymous", amount: 1200, message: "Supporting the cause quietly", date: "Since July 2023", type: "monthly" }
+            corporate: [
+                { id: "KC001", name: "Kerala Medical Association", amount: 50000, message: "Proud to support palliative care initiatives", date: "March 2024", type: "one-time" },
+                { id: "KC002", name: "Thrissur Rotary Club", amount: 30000, message: "Service above self - supporting our community", date: "February 2024", type: "one-time" }
             ],
-            recent: [
-                { name: "Dr. Priya Nair", amount: 5000, message: "Supporting compassionate care", date: "2 hours ago", type: "one-time" },
-                { name: "Anonymous", amount: 1000, message: "Every little helps", date: "5 hours ago", type: "one-time" },
-                { name: "Rajesh Kumar", amount: 2500, message: "Making a difference", date: "1 day ago", type: "one-time" },
-                { name: "Sunitha Menon", amount: 500, message: "Supporting the cause", date: "2 days ago", type: "one-time" },
-                { name: "Vijay Pillai", amount: 750, message: "Community support", date: "3 days ago", type: "one-time" },
-                { name: "Anonymous", amount: 300, message: "Every contribution matters", date: "4 days ago", type: "one-time" }
-            ]
+            stats: {
+                individualCount: 650,
+                corporateCount: 2,
+                totalIndividual: 650,
+                totalCorporate: 2
+            }
         };
     }
 
@@ -531,6 +538,7 @@ class DonorManager {
     // Add new donor
     addDonor(donorData) {
         const donor = {
+            id: this.generateDonorId(),
             name: donorData.anonymous ? "Anonymous" : donorData.name,
             amount: parseInt(donorData.amount),
             message: donorData.message || "Thank you for your support",
@@ -538,23 +546,20 @@ class DonorManager {
             type: donorData.type || "one-time"
         };
 
-        // Categorize donor based on amount and type
-        if (donor.amount >= 10000) {
-            this.donors.major.unshift(donor);
-        } else if (donor.type === "monthly") {
-            this.donors.recurrent.unshift(donor);
+        // Categorize donor based on type
+        if (donorData.isCorporate) {
+            this.donors.corporate.push(donor);
+            this.donors.stats.corporateCount++;
+            this.donors.stats.totalCorporate++;
         } else {
-            this.donors.recent.unshift(donor);
-        }
-
-        // Keep only recent 20 entries in recent donors
-        if (this.donors.recent.length > 20) {
-            this.donors.recent = this.donors.recent.slice(0, 20);
+            this.donors.individual.unshift(donor);
+            this.donors.stats.individualCount++;
+            this.donors.stats.totalIndividual++;
         }
 
         this.saveDonors();
         this.updateDonorLists();
-        this.showDonorAddedNotification(donor);
+        this.showDonorAddedNotification(donor.name, donor.id);
     }
 
     // Get current date/time for new donations
@@ -573,9 +578,8 @@ class DonorManager {
 
     // Update donor lists in the UI
     updateDonorLists() {
-        this.updateDonorCategory('major');
-        this.updateDonorCategory('recurrent');
-        this.updateDonorCategory('recent');
+        this.updateDonorCategory('individual');
+        this.updateDonorCategory('corporate');
         this.updateDonorStats();
     }
 
@@ -600,12 +604,10 @@ class DonorManager {
         const donorDiv = document.createElement('div');
         donorDiv.className = 'donor-item-expanded';
         
-        const amountText = donor.type === 'monthly' ? `₹${donor.amount.toLocaleString()}/month` : `₹${donor.amount.toLocaleString()}`;
-        
         donorDiv.innerHTML = `
             <div class="donor-info">
                 <span class="donor-name">${donor.name}</span>
-                <span class="donor-amount">${amountText}</span>
+                <span class="donor-id">ID: ${donor.id}</span>
             </div>
             <span class="donor-message">"${donor.message}"</span>
             <span class="donor-date">${donor.date}</span>
@@ -616,15 +618,14 @@ class DonorManager {
 
     // Update donor statistics
     updateDonorStats() {
-        const totalDonors = this.donors.major.length + this.donors.recurrent.length + this.donors.recent.length;
-        const totalAmount = this.calculateTotalAmount();
+        const individualCount = this.donors.stats.individualCount;
+        const corporateCount = this.donors.stats.corporateCount;
         
         // Update stats if elements exist
         const statElements = document.querySelectorAll('.donor-stat .stat-number');
-        if (statElements.length >= 3) {
-            statElements[0].textContent = `${totalDonors}+`;
-            statElements[1].textContent = "25+";
-            statElements[2].textContent = `₹${(totalAmount / 100000).toFixed(1)}L+`;
+        if (statElements.length >= 2) {
+            statElements[0].textContent = `${individualCount}+`;
+            statElements[1].textContent = `${corporateCount}`;
         }
     }
 
@@ -645,15 +646,15 @@ class DonorManager {
     }
 
     // Show notification when donor is added
-    showDonorAddedNotification(donor) {
+    showDonorAddedNotification(donorName, donorId) {
         const notification = document.createElement('div');
         notification.className = 'donor-added-notification';
         notification.innerHTML = `
             <div class="notification-content">
                 <i class="fas fa-heart"></i>
                 <div>
-                    <h4>Thank you, ${donor.name}!</h4>
-                    <p>Your donation of ₹${donor.amount.toLocaleString()} has been added to our supporters list.</p>
+                    <h4>Thank you, ${donorName}!</h4>
+                    <p>Your donation has been recorded. Donor ID: ${donorId}</p>
                 </div>
             </div>
         `;

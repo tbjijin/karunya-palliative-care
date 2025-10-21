@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Karunya Welfare and Charitable Society</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <img src="images/karunya-logo.png" alt="Karunya Welfare and Charitable Society" class="logo-image">
+                    </div>
+                    <div class="logo-text">
+                        <h2>Karunya Welfare and Charitable Society</h2>
+                        <p>Puthenpeedika, Anthikad</p>
+                    </div>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services/home-care.html" class="dropdown-link">
+                                <i class="fas fa-home"></i>
+                                <span>Home Care</span>
+                            </a></li>
+                            <li><a href="services/outpatient-clinic.html" class="dropdown-link">
+                                <i class="fas fa-hospital"></i>
+                                <span>Outpatient Clinic</span>
+                            </a></li>
+                            <li><a href="services/hospice-daycare.html" class="dropdown-link">
+                                <i class="fas fa-heart"></i>
+                                <span>Hospice & Daycare</span>
+                            </a></li>
+                            <li><a href="services/physiotherapy.html" class="dropdown-link">
+                                <i class="fas fa-dumbbell"></i>
+                                <span>Physiotherapy</span>
+                            </a></li>
+                            <li><a href="services/peer-support-groups.html" class="dropdown-link">
+                                <i class="fas fa-users"></i>
+                                <span>Peer Support Groups</span>
+                            </a></li>
+                            <li><a href="services/rehabilitation.html" class="dropdown-link">
+                                <i class="fas fa-hands-helping"></i>
+                                <span>Rehabilitation</span>
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#donors" class="nav-link">Supporters</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog & News</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="donate.html" class="donate-btn">Donate Now</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Admin Panel -->
+    <section class="admin-panel" style="padding: 120px 0 60px;">
+        <div class="container">
+            <div class="admin-header">
+                <h1>Admin Panel</h1>
+                <p>Manage donors and donations</p>
+            </div>
+
+            <!-- Donor Lookup -->
+            <div class="admin-section">
+                <h2>Donor Lookup</h2>
+                <div class="lookup-form">
+                    <input type="text" id="donorIdInput" placeholder="Enter Donor ID (e.g., KW001)" class="lookup-input">
+                    <button onclick="lookupDonor()" class="lookup-btn">Lookup</button>
+                </div>
+                <div id="lookupResult" class="lookup-result"></div>
+            </div>
+
+            <!-- Add New Donor -->
+            <div class="admin-section">
+                <h2>Add New Donor</h2>
+                <form id="addDonorForm" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donorName">Donor Name</label>
+                            <input type="text" id="donorName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="donorAmount">Amount (₹)</label>
+                            <input type="number" id="donorAmount" name="amount" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donorType">Type</label>
+                            <select id="donorType" name="type">
+                                <option value="one-time">One-time</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="donorCategory">Category</label>
+                            <select id="donorCategory" name="category">
+                                <option value="individual">Individual</option>
+                                <option value="corporate">Corporate</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="donorMessage">Message</label>
+                        <textarea id="donorMessage" name="message" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="donorAnonymous" name="anonymous">
+                            <span class="checkmark"></span>
+                            Anonymous Donation
+                        </label>
+                    </div>
+                    <button type="submit" class="admin-btn">Add Donor</button>
+                </form>
+            </div>
+
+            <!-- Donor Management -->
+            <div class="admin-section">
+                <h2>Donor Management</h2>
+                <div class="admin-actions">
+                    <button onclick="exportDonors()" class="admin-btn secondary">Export Donors</button>
+                    <button onclick="addSampleDonors()" class="admin-btn secondary">Add Sample Donors</button>
+                    <button onclick="clearAllDonors()" class="admin-btn danger">Clear All Donors</button>
+                </div>
+            </div>
+
+            <!-- Donor Statistics -->
+            <div class="admin-section">
+                <h2>Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Individual Donors</h3>
+                        <span class="stat-number" id="individualCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Corporate Donors</h3>
+                        <span class="stat-number" id="corporateCount">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Donors</h3>
+                        <span class="stat-number" id="totalCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Admin-specific functions
+        function lookupDonor() {
+            const donorId = document.getElementById('donorIdInput').value.trim();
+            const resultDiv = document.getElementById('lookupResult');
+            
+            if (!donorId) {
+                resultDiv.innerHTML = '<div class="error">Please enter a donor ID</div>';
+                return;
+            }
+
+            const donors = donorManager.donors;
+            let foundDonor = null;
+            
+            // Search in individual donors
+            foundDonor = donors.individual.find(donor => donor.id === donorId);
+            if (!foundDonor) {
+                // Search in corporate donors
+                foundDonor = donors.corporate.find(donor => donor.id === donorId);
+            }
+
+            if (foundDonor) {
+                resultDiv.innerHTML = `
+                    <div class="donor-details">
+                        <h3>Donor Details</h3>
+                        <div class="detail-row">
+                            <strong>Name:</strong> ${foundDonor.name}
+                        </div>
+                        <div class="detail-row">
+                            <strong>ID:</strong> ${foundDonor.id}
+                        </div>
+                        <div class="detail-row">
+                            <strong>Amount:</strong> ₹${foundDonor.amount.toLocaleString()}
+                        </div>
+                        <div class="detail-row">
+                            <strong>Type:</strong> ${foundDonor.type === 'monthly' ? 'Monthly' : 'One-time'}
+                        </div>
+                        <div class="detail-row">
+                            <strong>Date:</strong> ${foundDonor.date}
+                        </div>
+                        <div class="detail-row">
+                            <strong>Message:</strong> "${foundDonor.message}"
+                        </div>
+                    </div>
+                `;
+            } else {
+                resultDiv.innerHTML = '<div class="error">Donor not found</div>';
+            }
+        }
+
+        function clearAllDonors() {
+            if (confirm('Are you sure you want to clear all donors? This action cannot be undone.')) {
+                donorManager.donors = {
+                    individual: [],
+                    corporate: [],
+                    stats: {
+                        individualCount: 0,
+                        corporateCount: 0,
+                        totalIndividual: 0,
+                        totalCorporate: 0
+                    }
+                };
+                donorManager.saveDonors();
+                donorManager.updateDonorLists();
+                updateAdminStats();
+                alert('All donors have been cleared.');
+            }
+        }
+
+        function updateAdminStats() {
+            const stats = donorManager.donors.stats;
+            document.getElementById('individualCount').textContent = stats.individualCount;
+            document.getElementById('corporateCount').textContent = stats.corporateCount;
+            document.getElementById('totalCount').textContent = stats.individualCount + stats.corporateCount;
+        }
+
+        // Handle add donor form
+        document.getElementById('addDonorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const donorData = {
+                name: formData.get('name'),
+                amount: formData.get('amount'),
+                message: formData.get('message'),
+                type: formData.get('type'),
+                anonymous: document.getElementById('donorAnonymous').checked,
+                isCorporate: formData.get('category') === 'corporate'
+            };
+
+            donorManager.addDonor(donorData);
+            updateAdminStats();
+            
+            // Reset form
+            this.reset();
+            
+            alert(`Donor added successfully! Donor ID: ${donorManager.donors[donorData.isCorporate ? 'corporate' : 'individual'][0].id}`);
+        });
+
+        // Initialize admin panel
+        document.addEventListener('DOMContentLoaded', function() {
+            updateAdminStats();
+        });
+    </script>
+</body>
+</html>
