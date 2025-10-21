@@ -149,15 +149,19 @@ p {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #4a90e2, #357abd);
-    border-radius: 8px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .logo-text h2 {
@@ -2172,6 +2176,11 @@ p {
 
 /* Tablet Responsiveness */
 @media (max-width: 1024px) {
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
     .nav-menu {
         gap: 1.5rem;
     }
@@ -2188,6 +2197,11 @@ p {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
     .hamburger {
         display: flex;
     }
