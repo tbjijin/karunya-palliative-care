@@ -135,12 +135,16 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
+    min-width: 0;
 }
 
 .logo-icon {
@@ -155,10 +159,21 @@ p {
     font-size: 1.2rem;
 }
 
+.logo-text {
+    min-width: 0;
+    flex: 1;
+}
+
 .logo-text h2 {
     font-size: 1.3rem;
     margin: 0;
     color: #333;
+    line-height: 1.2;
+    word-wrap: break-word;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .logo-text p {
@@ -2163,8 +2178,47 @@ p {
     margin: 0;
 }
 
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+    .logo-text h2 {
+        font-size: 1.1rem;
+        max-width: 250px;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    .nav-menu {
+        gap: 1.5rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .donate-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+    }
+    
+    .logo-text h2 {
+        font-size: 1rem;
+        max-width: 200px;
+        white-space: normal;
+        line-height: 1.2;
+    }
+    
+    .logo-text p {
+        font-size: 0.75rem;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -2188,6 +2242,35 @@ p {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+    }
+}
+
+/* Extra Small Mobile Responsiveness */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .logo-text h2 {
+        font-size: 0.9rem;
+        max-width: 150px;
+        line-height: 1.1;
+        white-space: normal;
+    }
+    
+    .logo-text p {
+        font-size: 0.7rem;
+    }
+    
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .donate-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
     }
     
     .hero-title {
