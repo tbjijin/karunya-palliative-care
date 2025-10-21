@@ -1,4 +1,4 @@
-# Image Placement Guide for Karunya Palliative Care Website
+# Image Placement Guide for Karunya Welfare and Charitable Society Website
 
 ## 📁 Where to Place Your Images
 

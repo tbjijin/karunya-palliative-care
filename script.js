@@ -445,7 +445,7 @@ function printReceipt(donationData) {
     printWindow.document.write(`
         <html>
             <head>
-                <title>Donation Receipt - Karunya Palliative Care</title>
+                <title>Donation Receipt - Karunya Welfare and Charitable Society</title>
                 <style>
                     body { font-family: Arial, sans-serif; padding: 20px; }
                     .header { text-align: center; margin-bottom: 30px; }
@@ -456,7 +456,7 @@ function printReceipt(donationData) {
             </head>
             <body>
                 <div class="header">
-                    <h1>Karunya Palliative Care</h1>
+                    <h1>Karunya Welfare and Charitable Society</h1>
                     <p>Puthenpeedika, Anthikad</p>
                     <h2>Donation Receipt</h2>
                 </div>

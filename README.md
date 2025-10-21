@@ -1,6 +1,6 @@
-# Karunya Palliative Care Website
+# Karunya Welfare and Charitable Society Website
 
-A modern, responsive website for Karunya Palliative Care Puthenpeedika, a compassionate palliative care service serving families in and around Anthikad, Kerala.
+A modern, responsive website for Karunya Welfare and Charitable Society Puthenpeedika, a compassionate palliative care service serving families in and around Anthikad, Kerala.
 
 ## 🌟 Features
 
@@ -142,7 +142,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-**Karunya Palliative Care Puthenpeedika**
+**Karunya Welfare and Charitable Society Puthenpeedika**
 - Location: Anthikad, Thrissur, Kerala
 - Email: karunya.palliative@gmail.com
 - Phone: +91 123 456 7890
