@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Karunya Welfare and Charitable Society</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="logo-icon">
+                    <img src="../images/karunya-logo.png" alt="Karunya Welfare and Charitable Society" class="logo-image">
+                </div>
+                <h1>Admin Access</h1>
+                <p>Karunya Welfare and Charitable Society</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="password">Enter Admin Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter password">
+                    <i class="fas fa-lock input-icon"></i>
+                </div>
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Access Admin Panel
+                </button>
+                <div id="loginError" class="login-error"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel (Hidden until login) -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <div class="logo-icon">
+                            <img src="../images/karunya-logo.png" alt="Karunya Welfare and Charitable Society" class="logo-image">
+                        </div>
+                        <div class="logo-text">
+                            <h2>Admin Panel</h2>
+                            <p>Karunya Welfare and Charitable Society</p>
+                        </div>
+                    </div>
+                    <div class="admin-nav">
+                        <button onclick="logout()" class="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Admin Content -->
+        <section class="admin-content" style="padding: 120px 0 60px;">
+            <div class="container">
+                <div class="admin-header">
+                    <h1>Donor Management System</h1>
+                    <p>Manage donors, donations, and generate reports</p>
+                </div>
+
+                <!-- Search Section -->
+                <div class="admin-section">
+                    <h2><i class="fas fa-search"></i> Search Donors</h2>
+                    <div class="search-container">
+                        <div class="search-tabs">
+                            <button class="search-tab active" onclick="switchSearchTab('id')">Search by ID</button>
+                            <button class="search-tab" onclick="switchSearchTab('name')">Search by Name</button>
+                        </div>
+                        <div id="searchById" class="search-form">
+                            <input type="text" id="donorIdInput" placeholder="Enter Donor ID (e.g., KW001)" class="search-input">
+                            <button onclick="searchDonorById()" class="search-btn">Search</button>
+                        </div>
+                        <div id="searchByName" class="search-form" style="display: none;">
+                            <input type="text" id="donorNameInput" placeholder="Enter Donor Name" class="search-input">
+                            <button onclick="searchDonorByName()" class="search-btn">Search</button>
+                        </div>
+                    </div>
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+
+                <!-- Add/Edit Donor Section -->
+                <div class="admin-section">
+                    <h2><i class="fas fa-user-plus"></i> Add/Edit Donor</h2>
+                    <form id="donorForm" class="admin-form">
+                        <input type="hidden" id="editDonorId" value="">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="donorName">Donor Name *</label>
+                                <input type="text" id="donorName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donorAmount">Amount (₹) *</label>
+                                <input type="number" id="donorAmount" name="amount" required min="1">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="donorType">Type *</label>
+                                <select id="donorType" name="type">
+                                    <option value="one-time">One-time</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="donorCategory">Category *</label>
+                                <select id="donorCategory" name="category">
+                                    <option value="individual">Individual</option>
+                                    <option value="corporate">Corporate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="donorMessage">Message</label>
+                            <textarea id="donorMessage" name="message" rows="3" placeholder="Optional message from donor"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="donorAnonymous" name="anonymous">
+                                <span class="checkmark"></span>
+                                Anonymous Donation
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="admin-btn primary">
+                                <i class="fas fa-save"></i>
+                                <span id="submitText">Add Donor</span>
+                            </button>
+                            <button type="button" onclick="clearForm()" class="admin-btn secondary">
+                                <i class="fas fa-times"></i>
+                                Clear
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Donor Management -->
+                <div class="admin-section">
+                    <h2><i class="fas fa-cogs"></i> Management Actions</h2>
+                    <div class="admin-actions">
+                        <button onclick="exportToExcel()" class="admin-btn success">
+                            <i class="fas fa-file-excel"></i>
+                            Export to Excel
+                        </button>
+                        <button onclick="addSampleDonors()" class="admin-btn secondary">
+                            <i class="fas fa-plus"></i>
+                            Add Sample Donors
+                        </button>
+                        <button onclick="refreshData()" class="admin-btn secondary">
+                            <i class="fas fa-sync"></i>
+                            Refresh Data
+                        </button>
+                        <button onclick="clearAllDonors()" class="admin-btn danger">
+                            <i class="fas fa-trash"></i>
+                            Clear All Donors
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Statistics Dashboard -->
+                <div class="admin-section">
+                    <h2><i class="fas fa-chart-bar"></i> Statistics Dashboard</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>Individual Donors</h3>
+                                <span class="stat-number" id="individualCount">0</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>Corporate Donors</h3>
+                                <span class="stat-number" id="corporateCount">0</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>Total Donors</h3>
+                                <span class="stat-number" id="totalCount">0</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>Total Amount</h3>
+                                <span class="stat-number" id="totalAmount">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Donors List -->
+                <div class="admin-section">
+                    <h2><i class="fas fa-list"></i> Recent Donors</h2>
+                    <div class="donors-table-container">
+                        <table class="donors-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Amount</th>
+                                    <th>Type</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="donorsTableBody">
+                                <!-- Donors will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
