@@ -96,11 +96,14 @@ p {
 .donate-btn {
     background: linear-gradient(135deg, #4a90e2, #357abd);
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .donate-btn:hover {
@@ -134,23 +137,25 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
+    flex-wrap: nowrap;
+    gap: 2rem;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     flex-shrink: 0;
     min-width: 0;
 }
 
 .logo-icon {
-    width: 80px; /* Increased size for better visibility */
-    height: 80px;
+    width: 60px; /* Optimized size */
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,7 +172,7 @@ p {
 }
 
 .logo-text h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin: 0;
     color: #333;
     line-height: 1.2;
@@ -175,16 +180,19 @@ p {
 }
 
 .logo-text p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: #666;
+    white-space: nowrap;
     margin: 0;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
 }
 
 .nav-link {
@@ -192,6 +200,8 @@ p {
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -2186,8 +2196,29 @@ p {
 /* Tablet Responsiveness */
 @media (max-width: 1024px) {
     .logo-icon {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo-text h2 {
+        font-size: 0.95rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.7rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+    }
+    
+    .donate-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
     }
     
     .nav-menu {
@@ -2207,8 +2238,21 @@ p {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .logo-icon {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .logo-text h2 {
+        font-size: 0.9rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.65rem;
+    }
+    
+    .nav-container {
+        gap: 1rem;
+        padding: 0 15px;
     }
     
     .hamburger {
