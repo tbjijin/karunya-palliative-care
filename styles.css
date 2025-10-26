@@ -149,19 +149,21 @@ p {
 }
 
 .logo-icon {
-    width: 50px;
-    height: 50px;
+    width: 80px; /* Increased size for better visibility */
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .logo-image {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 50%;
 }
 
 .logo-text h2 {
@@ -235,7 +237,7 @@ p {
 .hero-main {
     z-index: 2;
     position: relative;
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -249,7 +251,7 @@ p {
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.1;
-    color: #1565c0;
+    color: #ffffff;
     text-align: center;
     letter-spacing: -0.5px;
     position: relative;
@@ -260,22 +262,24 @@ p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     font-weight: 500;
-    color: #1565c0;
+    color: #ffffff;
     text-align: center;
     line-height: 1.5;
     position: relative;
     z-index: 2;
+    opacity: 0.9;
 }
 
 .hero-description {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
-    color: #1565c0;
+    color: #ffffff;
     text-align: center;
     max-width: 100%;
     position: relative;
     z-index: 2;
+    opacity: 0.9;
 }
 
 .hero-buttons {
@@ -302,16 +306,16 @@ p {
 }
 
 .hero-buttons .cta-button.primary {
-    background: #64b5f6;
+    background: #ff6b6b;
     color: white;
-    box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
     border: none;
 }
 
 .hero-buttons .cta-button.primary:hover {
-    background: #42a5f5;
+    background: #ff5252;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(100, 181, 246, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
 }
 
 .hero-buttons .cta-button.secondary {
@@ -326,7 +330,7 @@ p {
 .hero-carousel {
     z-index: 1;
     position: relative;
-    background: #e3f2fd;
+    background: #0f0f1e;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2177,8 +2181,8 @@ p {
 /* Tablet Responsiveness */
 @media (max-width: 1024px) {
     .logo-icon {
-        width: 45px;
-        height: 45px;
+        width: 70px;
+        height: 70px;
     }
     
     .nav-menu {
@@ -2198,8 +2202,8 @@ p {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .logo-icon {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
     
     .hamburger {
