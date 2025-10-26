@@ -1293,7 +1293,14 @@ p {
 }
 
 .footer-logo .logo-icon {
-    background: linear-gradient(135deg, #4a90e2, #357abd);
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-logo h3 {
@@ -2374,6 +2381,15 @@ p {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .footer-logo .logo-icon {
+        width: 60px;
+        height: 60px;
     }
     
     .social-links {
